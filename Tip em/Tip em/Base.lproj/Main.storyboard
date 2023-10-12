@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculator View Controller-->
         <scene sceneID="fJo-KG-mmo">
             <objects>
-                <viewController id="s5G-GE-Mjq" customClass="ViewController" customModule="Tip_em" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="s5G-GE-Mjq" customClass="CalculatorViewController" customModule="Tip_em" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JyE-3G-KaA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,6 +44,9 @@
                                                         <state key="normal" title="0%">
                                                             <color key="titleColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="s5G-GE-Mjq" eventType="touchUpInside" id="Hjg-SE-zzH"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-Ov-ejE">
                                                         <rect key="frame" x="95.333333333333329" y="0.0" width="162.33333333333337" height="54"/>
@@ -55,6 +58,9 @@
                                                         <state key="normal" title="10%">
                                                             <color key="titleColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="s5G-GE-Mjq" eventType="touchUpInside" id="HFJ-x3-0xS"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmB-Oq-i05">
                                                         <rect key="frame" x="257.66666666666669" y="0.0" width="95.333333333333314" height="54"/>
@@ -66,6 +72,9 @@
                                                         <state key="normal" title="20%">
                                                             <color key="titleColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="s5G-GE-Mjq" eventType="touchUpInside" id="j0W-Bg-uir"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -101,6 +110,9 @@
                                                             <constraint firstAttribute="height" constant="29" id="d5h-zv-c3p"/>
                                                         </constraints>
                                                         <color key="tintColor" red="0.0" green="0.59227246050000004" blue="0.347086966" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="stepperValueChanged:" destination="s5G-GE-Mjq" eventType="valueChanged" id="AYH-1I-yQX"/>
+                                                        </connections>
                                                     </stepper>
                                                 </subviews>
                                             </stackView>
@@ -166,6 +178,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="s5G-GE-Mjq" eventType="touchUpInside" id="5UL-zE-bo8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SCr-TC-6Dn"/>
@@ -182,17 +197,25 @@
                             <constraint firstItem="AdK-jy-CIY" firstAttribute="leading" secondItem="JyE-3G-KaA" secondAttribute="leading" id="hj0-nA-kLM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billTextField" destination="Ih6-Zb-4SL" id="kvk-Ce-MwQ"/>
+                        <outlet property="splitNumberLabel" destination="sgm-94-mKk" id="DSX-nP-23c"/>
+                        <outlet property="tenPctButton" destination="0bo-Ov-ejE" id="Rgm-LU-ByB"/>
+                        <outlet property="twentyPctButton" destination="QmB-Oq-i05" id="6Ay-3R-SJH"/>
+                        <outlet property="zeroPctButton" destination="0Oc-kY-n3y" id="c7E-4k-k7y"/>
+                        <segue destination="O7S-IO-swk" kind="presentation" identifier="nextScreen" id="qpn-47-vK9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GgR-VI-Bfb" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="BSp-tn-dYk">
             <objects>
-                <viewController id="O7S-IO-swk" sceneMemberID="viewController">
+                <viewController id="O7S-IO-swk" customClass="ResultsViewController" customModule="Tip_em" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v3I-6g-OYy">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hZ-gF-0Lh">
@@ -229,7 +252,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeX-4Y-W4H">
-                                <rect key="frame" x="96.666666666666686" y="764" width="200" height="54"/>
+                                <rect key="frame" x="96.666666666666686" y="729" width="200" height="54"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="bm8-LU-YxS"/>
@@ -242,6 +265,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="O7S-IO-swk" eventType="touchUpInside" id="Da8-Zj-X1p"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoI-ci-X9e">
                                 <rect key="frame" x="50" y="305" width="293" height="117"/>
@@ -266,6 +292,10 @@
                             <constraint firstItem="SeX-4Y-W4H" firstAttribute="centerX" secondItem="v3I-6g-OYy" secondAttribute="centerX" id="zq0-wU-ESR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingsLabel" destination="OoI-ci-X9e" id="Ve3-b4-kTg"/>
+                        <outlet property="totalLabel" destination="jPd-O2-sSu" id="1tk-DH-bui"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTl-kr-P9r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E83373B7-FC22-432D-B61D-738D34563B9B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "761A195B-F403-4DFA-A462-293DAF648862"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tip em/Controllers/CalculatorViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "calculatePressed(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "761A195B-F403-4DFA-A462-293DAF648862 - e91398ddbde12ae1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tip_em.CalculatorViewController.calculatePressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Tip em"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aaraizwasim/Documents/GitHub/Tip-em/Tip%20em/Tip%20em/Controllers/CalculatorViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "761A195B-F403-4DFA-A462-293DAF648862 - e91398ddbde12ae1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tip_em.CalculatorViewController.calculatePressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Tip em"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aaraizwasim/Documents/GitHub/Tip-em/Tip%20em/Tip%20em/Controllers/CalculatorViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
